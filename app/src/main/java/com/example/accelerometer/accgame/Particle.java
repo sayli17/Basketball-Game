@@ -25,20 +25,20 @@ public class Particle {
 
     //add logic to create a bounce effect when it collides with the boundary
     public void resolveCollisionWithBounds(float mHorizontalBounds, float mVerticalBounds){
-        if (mPosX > mHorizontalBounds){
-            mPosX = mHorizontalBounds;
+        if (mPosX > (mHorizontalBounds-115)){
+            mPosX = mHorizontalBounds-115;
             mVelX = -mVelX * COR;
         }
-        else if (mPosX < -mHorizontalBounds){
-            mPosX = -mHorizontalBounds;
+        else if (mPosX <= -45){
+            mPosX = -45;
             mVelX = -mVelX * COR;
         }
-        if (mPosY > mVerticalBounds){
-            mPosY = mVerticalBounds;
+        if (mPosY > (mVerticalBounds-150)){
+            mPosY = mVerticalBounds-150;
             mVelY = -mVelY * COR;
         }
-        else if (mPosY < -mVerticalBounds){
-            mPosY = -mVerticalBounds;
+        else if (mPosY <= -45){
+            mPosY = -45;
             mVelY = -mVelY * COR;
         }
     }
